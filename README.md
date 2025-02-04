@@ -1,5 +1,5 @@
 # Case Study for bike-share fictional company
-This repository is shared to publish the final project completed from the Google Advanced Data Analytics course
+This repository is shared to publish the final project completed from the Google Data Analytics Professional course
 
 Case study: How does a bike-share navigate speedy success?
 
