@@ -1,6 +1,6 @@
 #set work directory
 getwd()
-setwd("C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study")
+setwd("https://github.com/Mvviggi/Bike-Share-case-study.git")
 
 #load packages
 library(tidyverse)

@@ -11,7 +11,7 @@ output: html_document
 <p>This repository is shared to publish the capstone project completed for the Google Data Analytics Professional course. 
 In this project the goal is to show the process of data analysis learned from the course to: 
 <ins>ask, prepare, process, analyze, share and act. <ins> <p>
----
+
 
 
 # Scenario
