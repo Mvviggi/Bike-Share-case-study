@@ -32,7 +32,7 @@ triprange$count_range<- as.numeric(triprange$count_range)
 #Check for missing values NA
 sum(is.na(triprange))
 
-                        
+}                        
 #Visualization  Median count rides ranges per month
 {
   triprange %>%
@@ -138,7 +138,7 @@ print(member_pie_count)
 
 
 
-}  
+ 
 
 {
 #median values by quarter
@@ -169,43 +169,14 @@ Month_median_trips<- rbind(Q1_monthly, Q2_monthly, Q3_monthly, Q4_monthly)
 Month_median_trips$weekday <- factor(Month_median_trips$weekday, levels = days_of_the_week)
 Month_median_trips$month <- factor(Month_median_trips$month, levels = months_of_year)
 write.csv(Month_median_trips, "C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/monthly_median_triplength.csv")
+summary(Month_median_trips)
 }
 #create a df with the median of day of the week for member and for casual users
-casual_data<- weekday_pie_df %>% filter(member_casual == "casual")
-member_data<- weekday_pie_df %>% filter(member_casual == "member")
-# Pie chart for casual users
-casual_pie <- ggplot(casual_data, aes(x = "", y = weekday_medianTrips, fill = weekday)) +
-  geom_bar(stat = "identity", width = 1) +
-  coord_polar(theta = "y") +
-  labs(title = "Casual Users - Median Trips by Weekday") +
-  theme_void()
+casual_data<- weekday_median_df %>% filter(member_casual == "casual")
+member_data<- weekday_median_df %>% filter(member_casual == "member")
 
-# Pie chart for member users
-member_pie <- ggplot(member_data, aes(x = "", y = weekday_medianTrips, fill = weekday)) +
-  geom_bar(stat = "identity", width = 1) +
-  coord_polar(theta = "y") +
-  labs(title = "Member Users - Median Trips by Weekday") +
-  theme_void()
 
-# Print plots
-print(casual_pie)
-print(member_pie)
 
-summary(Month_median_trips)
-weekday_pie_df<- Month_median_trips %>%
-  group_by(member_casual, weekday) %>%
-  summarise(weekday_medianTrips = median(trip_length)) %>%
-
-  pie(data=weekday_df, aes(x = " ", y = weekday_medianTrips, fill = weekday)) +
-  geom_bar( stat = "identity") +
-    coord_polar("y") +
-    geom_text(aes(label = paste0(round(weekday_medianTrips*100), "%"))) +
-  facet_grid(member_casual ~ .) +
-  theme_minimal() +
-  labs(title = "Mode of Trip Length by day of week Faceted by Membership Type",
-       x = "Weekday",
-       y = "Mode Trip Length") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))  
 
 
 summary(Q1_trips$total_trip.minutes)

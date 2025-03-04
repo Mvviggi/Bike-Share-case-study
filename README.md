@@ -57,7 +57,12 @@ annual members. In order to do that, however, the team needs to better understan
 **Tools:** <br>
 - Data cleaning: Excel Power Query and Pivot Tables<br>
 - Data Exploration: SQL and Rstudio <br>
-- Data visualization - Rstudio and Tableau
+- Data visualization - Rstudio and Tableau<br>
+
+
+#### 3. Process
+- [Data combining]: (Used PowerQuery to join 2023 months removed columns that will not be needed in the study. 
+
 
 
 
