@@ -1,0 +1,673 @@
+﻿member_casual,month,weekday,trip_range,count_range
+member,January,Saturday,10 to 30,3228
+member,January,Tuesday,under 10,16060
+casual,January,Monday,10 to 30,1385
+member,January,Sunday,under 10,7845
+member,January,Thursday,10 to 30,5033
+member,January,Sunday,10 to 30,3684
+member,January,Wednesday,under 10,13288
+member,January,Wednesday,10 to 30,5950
+member,January,Friday,10 to 30,4356
+member,January,Thursday,under 10,12365
+member,January,Monday,under 10,12286
+casual,January,Tuesday,under 10,3257
+member,January,Saturday,under 10,7669
+casual,January,Thursday,10 to 30,1045
+member,January,Tuesday,10 to 30,6906
+member,January,Tuesday,30 to 60,696
+member,January,Monday,10 to 30,5063
+casual,January,Monday,under 10,2504
+casual,January,Wednesday,10 to 30,1365
+member,January,Friday,under 10,10910
+casual,January,Friday,under 10,2384
+casual,January,Saturday,under 10,2123
+casual,January,Thursday,under 10,2467
+casual,January,Sunday,under 10,2359
+member,January,Monday,over 60,59
+member,January,Saturday,over 60,46
+member,January,Saturday,30 to 60,380
+casual,January,Wednesday,under 10,2799
+member,January,Wednesday,30 to 60,581
+member,January,Wednesday,over 60,56
+casual,January,Saturday,10 to 30,1273
+casual,January,Sunday,10 to 30,1878
+member,January,Thursday,30 to 60,457
+casual,January,Tuesday,10 to 30,1550
+casual,January,Sunday,over 60,192
+member,January,Monday,30 to 60,541
+casual,January,Monday,30 to 60,226
+casual,January,Friday,10 to 30,1050
+casual,January,Sunday,30 to 60,404
+member,January,Friday,over 60,62
+casual,January,Wednesday,over 60,86
+casual,January,Tuesday,over 60,119
+member,January,Sunday,30 to 60,535
+casual,January,Friday,30 to 60,113
+casual,January,Tuesday,30 to 60,196
+casual,January,Wednesday,30 to 60,204
+member,January,Tuesday,over 60,58
+member,January,Friday,30 to 60,433
+casual,January,Saturday,over 60,122
+casual,January,Saturday,30 to 60,227
+casual,January,Monday,over 60,94
+casual,January,Friday,over 60,56
+member,January,Sunday,over 60,69
+casual,January,Thursday,30 to 60,88
+casual,January,Thursday,over 60,52
+member,January,Thursday,over 60,46
+casual,February,Tuesday,10 to 30,1558
+casual,February,Wednesday,under 10,2307
+member,February,Sunday,10 to 30,5437
+member,February,Monday,10 to 30,5769
+member,February,Friday,under 10,9575
+member,February,Tuesday,under 10,15568
+member,February,Monday,under 10,13024
+member,February,Wednesday,under 10,11627
+member,February,Thursday,under 10,10122
+casual,February,Monday,under 10,2923
+casual,February,Friday,10 to 30,969
+member,February,Sunday,under 10,9404
+member,February,Thursday,10 to 30,3919
+casual,February,Sunday,10 to 30,3307
+member,February,Friday,10 to 30,3642
+casual,February,Tuesday,under 10,3187
+casual,February,Wednesday,10 to 30,927
+casual,February,Sunday,under 10,3052
+member,February,Wednesday,10 to 30,4851
+member,February,Saturday,under 10,8306
+member,February,Tuesday,10 to 30,6708
+member,February,Saturday,10 to 30,4331
+member,February,Saturday,30 to 60,628
+casual,February,Saturday,10 to 30,2091
+casual,February,Saturday,30 to 60,551
+member,February,Sunday,30 to 60,1021
+member,February,Wednesday,30 to 60,418
+casual,February,Monday,10 to 30,1662
+casual,February,Thursday,30 to 60,88
+member,February,Monday,30 to 60,643
+member,February,Friday,30 to 60,374
+casual,February,Sunday,30 to 60,1127
+casual,February,Saturday,under 10,2508
+casual,February,Thursday,10 to 30,763
+casual,February,Friday,under 10,1903
+casual,February,Thursday,under 10,1830
+member,February,Tuesday,30 to 60,707
+casual,February,Monday,over 60,162
+casual,February,Sunday,over 60,515
+casual,February,Friday,over 60,93
+casual,February,Tuesday,30 to 60,229
+member,February,Thursday,30 to 60,418
+casual,February,Thursday,over 60,61
+member,February,Friday,over 60,71
+member,February,Wednesday,over 60,53
+casual,February,Friday,30 to 60,138
+casual,February,Monday,30 to 60,364
+casual,February,Saturday,over 60,224
+casual,February,Wednesday,30 to 60,117
+member,February,Sunday,over 60,134
+member,February,Saturday,over 60,70
+member,February,Thursday,over 60,35
+casual,February,Tuesday,over 60,113
+casual,February,Wednesday,over 60,73
+member,February,Tuesday,over 60,46
+member,February,Monday,over 60,55
+member,March,Thursday,under 10,18928
+member,March,Friday,10 to 30,6219
+member,March,Wednesday,10 to 30,9788
+member,March,Thursday,10 to 30,8402
+member,March,Wednesday,under 10,20577
+casual,March,Wednesday,10 to 30,3057
+casual,March,Thursday,30 to 60,394
+member,March,Monday,under 10,13661
+member,March,Friday,under 10,15306
+casual,March,Sunday,30 to 60,572
+member,March,Sunday,under 10,8367
+casual,March,Thursday,under 10,4580
+member,March,Saturday,under 10,8120
+member,March,Monday,10 to 30,5877
+member,March,Saturday,10 to 30,3985
+casual,March,Saturday,under 10,2862
+member,March,Sunday,30 to 60,595
+member,March,Wednesday,30 to 60,1021
+casual,March,Wednesday,under 10,4806
+member,March,Sunday,10 to 30,4203
+casual,March,Tuesday,under 10,3790
+member,March,Tuesday,under 10,16780
+member,March,Monday,30 to 60,599
+casual,March,Thursday,10 to 30,2481
+member,March,Tuesday,10 to 30,7924
+casual,March,Saturday,10 to 30,2393
+casual,March,Monday,under 10,2943
+casual,March,Sunday,10 to 30,2283
+casual,March,Monday,10 to 30,1625
+casual,March,Sunday,under 10,2580
+casual,March,Thursday,over 60,194
+member,March,Saturday,30 to 60,544
+member,March,Tuesday,30 to 60,822
+casual,March,Friday,under 10,3712
+casual,March,Friday,10 to 30,2475
+casual,March,Tuesday,30 to 60,542
+casual,March,Tuesday,10 to 30,2468
+casual,March,Monday,30 to 60,339
+member,March,Friday,30 to 60,627
+casual,March,Wednesday,30 to 60,537
+casual,March,Monday,over 60,176
+casual,March,Friday,over 60,225
+casual,March,Friday,30 to 60,427
+member,March,Thursday,over 60,66
+casual,March,Saturday,30 to 60,438
+casual,March,Tuesday,over 60,201
+member,March,Thursday,30 to 60,783
+member,March,Tuesday,over 60,82
+member,March,Friday,over 60,82
+casual,March,Wednesday,over 60,232
+member,March,Sunday,over 60,62
+casual,March,Sunday,over 60,264
+casual,March,Saturday,over 60,190
+member,March,Monday,over 60,51
+member,March,Wednesday,over 60,113
+member,March,Saturday,over 60,63
+member,April,Monday,10 to 30,8129
+member,April,Wednesday,10 to 30,11447
+member,April,Thursday,under 10,22016
+member,April,Saturday,under 10,16510
+casual,April,Thursday,10 to 30,7039
+member,April,Friday,under 10,19815
+member,April,Wednesday,under 10,20179
+member,April,Saturday,10 to 30,11149
+member,April,Tuesday,30 to 60,1355
+member,April,Sunday,under 10,13343
+member,April,Tuesday,10 to 30,10561
+casual,April,Sunday,10 to 30,5514
+casual,April,Monday,30 to 60,858
+casual,April,Sunday,30 to 60,2102
+casual,April,Friday,10 to 30,7774
+casual,April,Friday,under 10,7902
+casual,April,Saturday,over 60,2137
+casual,April,Tuesday,under 10,5345
+casual,April,Wednesday,30 to 60,1383
+casual,April,Thursday,30 to 60,1827
+casual,April,Saturday,under 10,8301
+member,April,Friday,10 to 30,11374
+casual,April,Saturday,30 to 60,3715
+casual,April,Tuesday,10 to 30,4419
+member,April,Thursday,10 to 30,13303
+member,April,Thursday,30 to 60,1767
+member,April,Monday,under 10,17273
+member,April,Tuesday,under 10,19288
+member,April,Wednesday,30 to 60,1587
+member,April,Monday,30 to 60,951
+casual,April,Sunday,over 60,1096
+casual,April,Wednesday,under 10,6284
+member,April,Sunday,30 to 60,1345
+member,April,Friday,30 to 60,1570
+member,April,Saturday,over 60,265
+casual,April,Friday,30 to 60,2359
+member,April,Sunday,10 to 30,7489
+member,April,Sunday,over 60,186
+casual,April,Saturday,10 to 30,11035
+casual,April,Monday,10 to 30,3228
+casual,April,Sunday,under 10,5512
+casual,April,Thursday,over 60,970
+casual,April,Monday,under 10,4524
+casual,April,Thursday,under 10,7657
+member,April,Saturday,30 to 60,2022
+casual,April,Monday,over 60,486
+casual,April,Wednesday,over 60,692
+casual,April,Tuesday,30 to 60,1200
+casual,April,Wednesday,10 to 30,5306
+casual,April,Friday,over 60,1272
+member,April,Thursday,over 60,198
+member,April,Monday,over 60,95
+member,April,Wednesday,over 60,131
+member,April,Tuesday,over 60,134
+casual,April,Tuesday,over 60,589
+member,April,Friday,over 60,165
+member,May,Wednesday,10 to 30,20076
+member,May,Tuesday,under 10,29534
+member,May,Tuesday,10 to 30,20442
+casual,May,Tuesday,30 to 60,2810
+member,May,Saturday,under 10,16431
+member,May,Monday,10 to 30,13803
+member,May,Friday,under 10,20138
+member,May,Friday,10 to 30,12943
+member,May,Thursday,10 to 30,16734
+casual,May,Saturday,30 to 60,5227
+casual,May,Monday,10 to 30,9149
+member,May,Monday,30 to 60,2196
+casual,May,Sunday,over 60,3421
+member,May,Thursday,under 10,24063
+member,May,Saturday,10 to 30,13262
+member,May,Sunday,10 to 30,12976
+casual,May,Saturday,10 to 30,13918
+member,May,Sunday,under 10,15190
+member,May,Monday,under 10,21964
+member,May,Wednesday,under 10,29527
+member,May,Friday,30 to 60,1886
+member,May,Wednesday,30 to 60,2513
+casual,May,Tuesday,10 to 30,10748
+casual,May,Saturday,under 10,9341
+casual,May,Wednesday,under 10,9887
+member,May,Tuesday,30 to 60,2882
+member,May,Saturday,30 to 60,2398
+casual,May,Sunday,10 to 30,14339
+casual,May,Wednesday,10 to 30,9860
+casual,May,Sunday,under 10,9150
+casual,May,Thursday,under 10,8467
+casual,May,Monday,30 to 60,3319
+member,May,Sunday,30 to 60,2875
+casual,May,Thursday,10 to 30,9149
+casual,May,Wednesday,30 to 60,2371
+casual,May,Monday,under 10,7776
+casual,May,Tuesday,under 10,9861
+casual,May,Friday,10 to 30,9343
+casual,May,Friday,30 to 60,2524
+casual,May,Saturday,over 60,2739
+casual,May,Thursday,30 to 60,2300
+casual,May,Sunday,30 to 60,5962
+casual,May,Friday,under 10,8183
+casual,May,Friday,over 60,1341
+casual,May,Thursday,over 60,1203
+casual,May,Tuesday,over 60,1529
+member,May,Thursday,30 to 60,2259
+member,May,Tuesday,over 60,284
+member,May,Saturday,over 60,359
+casual,May,Wednesday,over 60,1110
+casual,May,Monday,over 60,1998
+member,May,Friday,over 60,251
+member,May,Sunday,over 60,409
+member,May,Thursday,over 60,248
+member,May,Wednesday,over 60,245
+member,May,Monday,over 60,274
+member,June,Tuesday,under 10,22551
+member,June,Wednesday,30 to 60,2188
+member,June,Friday,under 10,29631
+member,June,Wednesday,under 10,25564
+member,June,Wednesday,10 to 30,18469
+member,June,Monday,under 10,22856
+member,June,Friday,10 to 30,22261
+casual,June,Friday,over 60,2722
+casual,June,Sunday,10 to 30,14154
+member,June,Sunday,under 10,15515
+member,June,Saturday,under 10,20238
+member,June,Sunday,10 to 30,13057
+casual,June,Monday,under 10,9059
+casual,June,Tuesday,over 60,955
+member,June,Monday,30 to 60,2344
+member,June,Sunday,over 60,342
+member,June,Tuesday,10 to 30,15208
+member,June,Thursday,under 10,30695
+casual,June,Tuesday,30 to 60,1687
+casual,June,Wednesday,under 10,10240
+casual,June,Friday,under 10,14274
+casual,June,Saturday,under 10,14362
+casual,June,Saturday,10 to 30,23889
+casual,June,Thursday,10 to 30,13728
+casual,June,Monday,10 to 30,10273
+casual,June,Friday,10 to 30,18254
+casual,June,Thursday,under 10,12486
+casual,June,Wednesday,10 to 30,10526
+casual,June,Sunday,under 10,9482
+casual,June,Tuesday,10 to 30,7577
+member,June,Wednesday,over 60,250
+member,June,Saturday,10 to 30,19695
+member,June,Friday,30 to 60,3173
+member,June,Monday,10 to 30,15740
+casual,June,Tuesday,under 10,7998
+member,June,Thursday,10 to 30,22421
+casual,June,Friday,30 to 60,5209
+member,June,Monday,over 60,244
+casual,June,Wednesday,30 to 60,2595
+casual,June,Sunday,over 60,2625
+member,June,Friday,over 60,414
+casual,June,Monday,30 to 60,2816
+casual,June,Monday,over 60,1611
+casual,June,Saturday,over 60,4349
+member,June,Saturday,30 to 60,4043
+casual,June,Sunday,30 to 60,4636
+casual,June,Saturday,30 to 60,8151
+casual,June,Thursday,30 to 60,3220
+member,June,Thursday,30 to 60,2789
+member,June,Sunday,30 to 60,2497
+casual,June,Wednesday,over 60,1283
+casual,June,Thursday,over 60,1627
+member,June,Saturday,over 60,534
+member,June,Tuesday,30 to 60,1782
+member,June,Thursday,over 60,290
+member,June,Tuesday,over 60,150
+member,July,Sunday,10 to 30,18112
+member,July,Sunday,under 10,20396
+member,July,Friday,under 10,23773
+member,July,Saturday,10 to 30,20298
+member,July,Monday,under 10,30433
+member,July,Tuesday,under 10,23763
+member,July,Tuesday,10 to 30,18780
+member,July,Monday,10 to 30,22533
+casual,July,Tuesday,10 to 30,12922
+casual,July,Wednesday,under 10,8710
+member,July,Wednesday,under 10,22803
+member,July,Thursday,10 to 30,20221
+member,July,Tuesday,30 to 60,2936
+member,July,Saturday,under 10,23463
+member,July,Friday,10 to 30,17267
+casual,July,Sunday,10 to 30,20751
+member,July,Monday,30 to 60,3551
+casual,July,Wednesday,10 to 30,8710
+casual,July,Saturday,30 to 60,8593
+casual,July,Sunday,under 10,12648
+casual,July,Saturday,10 to 30,24799
+casual,July,Thursday,over 60,1636
+casual,July,Thursday,10 to 30,12591
+casual,July,Friday,10 to 30,14223
+casual,July,Monday,under 10,12744
+member,July,Friday,30 to 60,2626
+casual,July,Thursday,under 10,10990
+member,July,Thursday,under 10,26357
+casual,July,Tuesday,under 10,10395
+casual,July,Friday,over 60,2212
+member,July,Wednesday,10 to 30,15956
+casual,July,Monday,10 to 30,15595
+casual,July,Tuesday,30 to 60,4106
+casual,July,Monday,over 60,2970
+member,July,Thursday,30 to 60,2733
+casual,July,Sunday,30 to 60,7281
+member,July,Saturday,30 to 60,4067
+casual,July,Thursday,30 to 60,3152
+casual,July,Monday,30 to 60,5136
+member,July,Sunday,30 to 60,3867
+casual,July,Friday,under 10,11285
+casual,July,Saturday,under 10,15498
+member,July,Wednesday,30 to 60,2057
+casual,July,Sunday,over 60,4277
+casual,July,Friday,30 to 60,4218
+member,July,Monday,over 60,399
+casual,July,Saturday,over 60,4478
+casual,July,Wednesday,30 to 60,2034
+casual,July,Wednesday,over 60,1018
+member,July,Friday,over 60,349
+casual,July,Tuesday,over 60,2347
+member,July,Saturday,over 60,532
+member,July,Thursday,over 60,277
+member,July,Sunday,over 60,539
+member,July,Wednesday,over 60,189
+member,July,Tuesday,over 60,345
+member,August,Saturday,10 to 30,17233
+member,August,Friday,under 10,25037
+member,August,Wednesday,under 10,33813
+member,August,Thursday,under 10,32259
+member,August,Tuesday,under 10,34310
+member,August,Monday,10 to 30,15463
+member,August,Thursday,10 to 30,23088
+member,August,Sunday,under 10,17540
+member,August,Monday,under 10,22472
+member,August,Wednesday,10 to 30,25717
+member,August,Sunday,30 to 60,3167
+member,August,Tuesday,10 to 30,25869
+member,August,Friday,10 to 30,19211
+casual,August,Thursday,10 to 30,14712
+casual,August,Saturday,under 10,12360
+member,August,Saturday,under 10,18948
+casual,August,Friday,10 to 30,16614
+casual,August,Wednesday,under 10,12999
+member,August,Tuesday,30 to 60,3801
+member,August,Sunday,10 to 30,15359
+casual,August,Monday,over 60,1221
+casual,August,Thursday,under 10,13322
+member,August,Saturday,over 60,441
+casual,August,Sunday,10 to 30,16339
+casual,August,Monday,10 to 30,8616
+casual,August,Sunday,30 to 60,5692
+member,August,Wednesday,30 to 60,3357
+casual,August,Tuesday,under 10,12245
+casual,August,Saturday,over 60,3693
+member,August,Sunday,over 60,441
+casual,August,Saturday,30 to 60,6487
+member,August,Wednesday,over 60,327
+casual,August,Friday,30 to 60,4715
+member,August,Friday,30 to 60,3100
+casual,August,Monday,30 to 60,2423
+casual,August,Tuesday,over 60,1906
+member,August,Saturday,30 to 60,3288
+casual,August,Tuesday,10 to 30,13950
+casual,August,Saturday,10 to 30,20011
+casual,August,Tuesday,30 to 60,3594
+casual,August,Sunday,under 10,10650
+member,August,Tuesday,over 60,356
+casual,August,Monday,under 10,7997
+casual,August,Wednesday,over 60,1902
+member,August,Thursday,30 to 60,3245
+casual,August,Friday,under 10,12371
+casual,August,Thursday,over 60,1714
+casual,August,Sunday,over 60,3164
+casual,August,Wednesday,10 to 30,15174
+casual,August,Friday,over 60,2654
+member,August,Monday,30 to 60,2185
+casual,August,Wednesday,30 to 60,3651
+member,August,Thursday,over 60,328
+casual,August,Thursday,30 to 60,3684
+member,August,Monday,over 60,230
+member,August,Friday,over 60,417
+member,September,Saturday,under 10,25636
+member,September,Saturday,10 to 30,21572
+member,September,Monday,10 to 30,12461
+member,September,Wednesday,under 10,26507
+member,September,Monday,under 10,19402
+member,September,Sunday,under 10,17147
+member,September,Tuesday,10 to 30,15459
+member,September,Sunday,30 to 60,2781
+member,September,Thursday,under 10,27133
+member,September,Friday,10 to 30,20539
+casual,September,Monday,10 to 30,8066
+casual,September,Tuesday,under 10,7844
+casual,September,Saturday,over 60,4682
+casual,September,Wednesday,10 to 30,8018
+member,September,Tuesday,30 to 60,1825
+casual,September,Tuesday,10 to 30,7039
+member,September,Friday,under 10,29556
+member,September,Sunday,10 to 30,13848
+member,September,Tuesday,under 10,24141
+member,September,Thursday,10 to 30,18346
+member,September,Wednesday,10 to 30,18070
+member,September,Monday,30 to 60,1769
+casual,September,Thursday,under 10,9509
+casual,September,Wednesday,under 10,8795
+member,September,Wednesday,30 to 60,2130
+casual,September,Friday,30 to 60,3969
+casual,September,Thursday,30 to 60,1777
+casual,September,Sunday,under 10,10390
+casual,September,Sunday,over 60,3133
+casual,September,Saturday,under 10,16107
+casual,September,Friday,under 10,12981
+casual,September,Saturday,10 to 30,23560
+casual,September,Thursday,10 to 30,8714
+casual,September,Monday,under 10,7547
+casual,September,Sunday,30 to 60,5400
+member,September,Thursday,30 to 60,2129
+member,September,Friday,30 to 60,3060
+casual,September,Friday,10 to 30,14716
+member,September,Saturday,30 to 60,4037
+casual,September,Wednesday,30 to 60,1610
+casual,September,Tuesday,30 to 60,1372
+casual,September,Sunday,10 to 30,14911
+casual,September,Tuesday,over 60,683
+casual,September,Monday,30 to 60,2559
+casual,September,Saturday,30 to 60,8167
+casual,September,Friday,over 60,2051
+casual,September,Monday,over 60,1533
+member,September,Saturday,over 60,537
+casual,September,Thursday,over 60,947
+casual,September,Wednesday,over 60,858
+member,September,Sunday,over 60,403
+member,September,Tuesday,over 60,178
+member,September,Friday,over 60,354
+member,September,Thursday,over 60,217
+member,September,Wednesday,over 60,182
+member,September,Monday,over 60,198
+member,October,Sunday,10 to 30,12874
+member,October,Wednesday,10 to 30,15368
+member,October,Thursday,under 10,23349
+member,October,Tuesday,under 10,31073
+member,October,Monday,10 to 30,15576
+member,October,Tuesday,10 to 30,18908
+casual,October,Monday,under 10,8535
+member,October,Wednesday,under 10,25302
+casual,October,Sunday,10 to 30,11941
+casual,October,Friday,10 to 30,5670
+casual,October,Sunday,under 10,9752
+casual,October,Thursday,10 to 30,5390
+member,October,Thursday,10 to 30,13391
+member,October,Saturday,10 to 30,9619
+member,October,Sunday,under 10,19393
+member,October,Sunday,30 to 60,2141
+member,October,Monday,under 10,28768
+member,October,Friday,10 to 30,10857
+member,October,Friday,under 10,20075
+casual,October,Saturday,30 to 60,2397
+casual,October,Saturday,under 10,7135
+casual,October,Tuesday,10 to 30,7726
+member,October,Saturday,under 10,15335
+casual,October,Thursday,under 10,7175
+casual,October,Wednesday,10 to 30,6575
+casual,October,Wednesday,under 10,7904
+casual,October,Saturday,10 to 30,8138
+casual,October,Tuesday,under 10,9260
+casual,October,Monday,30 to 60,1801
+casual,October,Monday,10 to 30,6597
+member,October,Monday,30 to 60,1803
+casual,October,Friday,under 10,7184
+casual,October,Monday,over 60,1078
+casual,October,Friday,30 to 60,1439
+casual,October,Sunday,30 to 60,3810
+member,October,Thursday,30 to 60,1403
+member,October,Wednesday,30 to 60,1731
+casual,October,Wednesday,30 to 60,1375
+member,October,Friday,30 to 60,1323
+casual,October,Sunday,over 60,2339
+member,October,Wednesday,over 60,182
+casual,October,Tuesday,30 to 60,1823
+member,October,Tuesday,30 to 60,2414
+member,October,Saturday,30 to 60,1409
+member,October,Sunday,over 60,305
+member,October,Thursday,over 60,127
+casual,October,Friday,over 60,686
+casual,October,Tuesday,over 60,1040
+casual,October,Saturday,over 60,1160
+casual,October,Thursday,30 to 60,1009
+member,October,Tuesday,over 60,217
+casual,October,Wednesday,over 60,809
+member,October,Saturday,over 60,162
+casual,October,Thursday,over 60,521
+member,October,Monday,over 60,179
+member,October,Friday,over 60,149
+member,November,Thursday,10 to 30,13059
+member,November,Friday,30 to 60,901
+member,November,Thursday,under 10,24290
+member,November,Wednesday,10 to 30,12187
+casual,November,Thursday,over 60,414
+member,November,Sunday,10 to 30,6755
+member,November,Sunday,under 10,11378
+member,November,Saturday,30 to 60,1249
+member,November,Saturday,under 10,13290
+member,November,Friday,under 10,16481
+member,November,Thursday,30 to 60,1515
+casual,November,Monday,under 10,4314
+casual,November,Sunday,over 60,619
+member,November,Wednesday,30 to 60,1274
+member,November,Wednesday,under 10,23484
+member,November,Saturday,10 to 30,8016
+member,November,Monday,30 to 60,1045
+member,November,Tuesday,30 to 60,967
+member,November,Monday,under 10,18625
+member,November,Tuesday,under 10,19506
+member,November,Friday,10 to 30,8140
+member,November,Monday,10 to 30,9161
+casual,November,Saturday,10 to 30,5851
+casual,November,Wednesday,10 to 30,3298
+casual,November,Thursday,under 10,6921
+casual,November,Thursday,10 to 30,4759
+casual,November,Saturday,over 60,729
+casual,November,Sunday,under 10,4342
+casual,November,Sunday,10 to 30,4270
+casual,November,Friday,under 10,5032
+casual,November,Friday,30 to 60,690
+casual,November,Saturday,under 10,5561
+casual,November,Tuesday,under 10,4501
+casual,November,Tuesday,10 to 30,2513
+casual,November,Saturday,30 to 60,1656
+member,November,Sunday,30 to 60,1169
+member,November,Tuesday,10 to 30,9396
+casual,November,Friday,10 to 30,3441
+member,November,Sunday,over 60,135
+casual,November,Tuesday,over 60,207
+casual,November,Wednesday,over 60,237
+casual,November,Wednesday,under 10,5804
+member,November,Wednesday,over 60,129
+casual,November,Sunday,30 to 60,1200
+casual,November,Monday,over 60,294
+casual,November,Monday,10 to 30,2790
+casual,November,Wednesday,30 to 60,524
+member,November,Saturday,over 60,142
+casual,November,Tuesday,30 to 60,353
+casual,November,Thursday,30 to 60,864
+member,November,Tuesday,over 60,86
+casual,November,Monday,30 to 60,561
+member,November,Thursday,over 60,112
+member,November,Friday,over 60,70
+casual,November,Friday,over 60,316
+member,November,Monday,over 60,99
+member,December,Saturday,under 10,10511
+casual,December,Thursday,under 10,3122
+casual,December,Monday,10 to 30,1094
+casual,December,Monday,under 10,2128
+casual,December,Saturday,under 10,3372
+casual,December,Wednesday,over 60,143
+member,December,Sunday,under 10,8342
+member,December,Monday,under 10,11294
+member,December,Friday,under 10,14025
+member,December,Sunday,10 to 30,4513
+member,December,Saturday,10 to 30,5639
+member,December,Friday,10 to 30,6944
+member,December,Wednesday,under 10,13740
+member,December,Tuesday,under 10,11962
+member,December,Thursday,under 10,13836
+member,December,Tuesday,10 to 30,5394
+member,December,Thursday,10 to 30,7049
+member,December,Wednesday,10 to 30,6977
+member,December,Thursday,30 to 60,755
+member,December,Monday,10 to 30,4971
+casual,December,Wednesday,under 10,2971
+casual,December,Saturday,10 to 30,2735
+casual,December,Sunday,under 10,2565
+casual,December,Saturday,30 to 60,575
+member,December,Monday,30 to 60,513
+member,December,Saturday,30 to 60,844
+casual,December,Sunday,10 to 30,2132
+casual,December,Friday,under 10,3615
+casual,December,Wednesday,10 to 30,1625
+casual,December,Thursday,10 to 30,1876
+casual,December,Tuesday,10 to 30,1152
+casual,December,Friday,over 60,210
+casual,December,Friday,30 to 60,402
+casual,December,Sunday,30 to 60,434
+casual,December,Tuesday,under 10,2370
+casual,December,Friday,10 to 30,2451
+member,December,Wednesday,30 to 60,674
+casual,December,Wednesday,30 to 60,288
+member,December,Tuesday,30 to 60,552
+member,December,Friday,30 to 60,858
+member,December,Sunday,30 to 60,603
+casual,December,Thursday,30 to 60,280
+casual,December,Sunday,over 60,180
+casual,December,Monday,over 60,131
+casual,December,Saturday,over 60,248
+casual,December,Tuesday,30 to 60,158
+casual,December,Monday,30 to 60,184
+member,December,Friday,over 60,105
+casual,December,Tuesday,over 60,106
+member,December,Saturday,over 60,69
+casual,December,Thursday,over 60,135
+member,December,Wednesday,over 60,47
+member,December,Thursday,over 60,64
+member,December,Tuesday,over 60,47
+member,December,Monday,over 60,55
+member,December,Sunday,over 60,53
