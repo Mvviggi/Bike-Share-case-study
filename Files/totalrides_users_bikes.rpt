@@ -1,0 +1,12 @@
+﻿member_casual                                      rideable_type                                      total_rides
+-------------------------------------------------- -------------------------------------------------- -----------
+casual                                             electric_bike                                      585028
+casual                                             classic_bike                                       537488
+casual                                             docked_bike                                        54962
+member                                             classic_bike                                       1254647
+member                                             electric_bike                                      1131693
+
+(5 rows affected)
+
+
+Completion time: 2025-02-27T15:03:02.4684386-04:00

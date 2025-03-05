@@ -365,7 +365,6 @@ the Google Data Analytics Professional course. In this project the goal
 is to show the process of data analysis learned from the course to:
 <ins>ask, prepare, process, analyze, share and act. <ins>
 <p>
-<hr />
 </div>
 <div id="scenario" class="section level1">
 <h1>Scenario</h1>
@@ -417,8 +416,20 @@ members? <br></p>
 <p><strong>Data Source:</strong> <a href="https://divvy-tripdata.s3.amazonaws.com/index.html">divvy-tripdata</a><br>
 [Note that the data has been made available by Motivate International
 Inc. under this <a href="https://www.divvybikes.com/data-license-agreement"><ins>license</ins></a>.]</p>
-<p><strong>Tools:</strong> <br> - Data cleaning and processing: Excel
-Power Query <br> - Data visualization - Rstudio and Tableau</p>
+<p><strong>Tools:</strong> <br> - Data cleaning and exploration: Excel
+Power Query and Pivot Tables<br> - Data Combining: SQL and Rstudio <br>
+- Data visualization - Rstudio and Tableau<br></p>
+</div>
+<div id="process" class="section level4">
+<h4>3. Process</h4>
+<ul>
+<li>Data combining
+<ol style="list-style-type: decimal">
+<li>Used PowerQuery to join 2023 months removed columns that will not be
+needed in the study. <br></li>
+<li>Using SQL to combine 2023 database that was saved in quarters.<a href="https://github.com/Mvviggi/Bike-Share-case-study/blob/c9f5d591b21cca0ab0665d3d0a07aa930aaabb23/Data_combining.sql"><ins>Data_combining.sql<ins></a></li>
+</ol></li>
+</ul>
 <p>Load R packages</p>
 <pre><code>library(tidyverse)
 library(dplyr)

@@ -55,13 +55,16 @@ annual members. In order to do that, however, the team needs to better understan
 [Note that the data has been made available by Motivate International Inc. under this [<ins>license</ins>](https://www.divvybikes.com/data-license-agreement).]
 
 **Tools:** <br>
-- Data cleaning: Excel Power Query and Pivot Tables<br>
-- Data Exploration: SQL and Rstudio <br>
+- Data cleaning and exploration: Excel Power Query and Pivot Tables<br>
+- Data Combining: SQL and Rstudio <br>
 - Data visualization - Rstudio and Tableau<br>
 
 
 #### 3. Process
-- [Data combining]: (Used PowerQuery to join 2023 months removed columns that will not be needed in the study. 
+- Data combining
+  1. Used PowerQuery to join 2023 months removed columns that will not be needed in the study. <br>
+  2. Using SQL to combine 2023 database that was saved in quarters.[<ins>Data_combining.sql<ins>](https://github.com/Mvviggi/Bike-Share-case-study/blob/c9f5d591b21cca0ab0665d3d0a07aa930aaabb23/Data_combining.sql)
+  
 
 
 

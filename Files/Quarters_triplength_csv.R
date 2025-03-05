@@ -16,5 +16,26 @@ sept<- read.csv("C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/Sep
 #merge with rbind Q2 and Q3 
 Q2_trips<- rbind(april, may, june)
 Q3_trips<- rbind(july, aug, sept)
-write.csv(Q2_trips, "C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/Q2_trips.csv")
+write.csv(Q2_trips, "C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/Q2_trips.csv") #Missing data too large for spreadsheet
 write.csv(Q3_trips, "C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/Q3_trips.csv")
+
+count(Q2_trips$member_casual)
+Q2_trips %>%
+  count(member_casual)
+
+count4<- april %>%
+  count(member_casual)
+
+count5<- may %>%
+  count(member_casual)
+
+count6<- june %>%
+  count(member_casual)
+
+totalcountsQ2<- rbind(count4, count5, count6)
+
+totalmember_casual<- totalcountsQ2 %>%
+  group_by(member_casual) %>%
+  summarise(total=sum(n))
+
+            
