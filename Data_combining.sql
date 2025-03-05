@@ -17,8 +17,9 @@ COUNT(total_trip_minutes) total_trip_minutes,
 COUNT(quarter) quarter
 FROM Q2_trips;
 
---Realized that the Q2_trips is missing data due to exceeding rows for a csv file maximum row
---create tables per month for Q2--april, may and june. Then union all for Q2 trips.
+--In PowerQuery the Q3_trips and Q2_trips exceed the number of rows to create a csv file.
+--need to add tables by month and then union by quarter.
+--create tables per month for Q2--april, may and june. and Q3- july, aug, sept
 CREATE TABLE Q2_trips (
 	rideable_type nvarchar(50),
 	member_casual nvarchar(50),
@@ -39,14 +40,6 @@ SELECT COUNT(*)
 FROM Q2_trips;
 
 
-SELECT COUNT(*) ,
-COUNT(rideable_type) rideable_type,
-COUNT(member_casual) member_casual,
-COUNT(month) month,
-COUNT(weekday) weekday,
-COUNT(total_trip_minutes) total_trip_minutes,
-COUNT(quarter) quarter
-FROM Q3_trips
 
 SELECT COUNT(*) ,
 COUNT(rideable_type) rideable_type,
@@ -55,7 +48,16 @@ COUNT(month) month,
 COUNT(weekday) weekday,
 COUNT(total_trip_minutes) total_trip_minutes,
 COUNT(quarter) quarter
-FROM Q4_trips
+FROM Q3_trips;
+
+SELECT COUNT(*) ,
+COUNT(rideable_type) rideable_type,
+COUNT(member_casual) member_casual,
+COUNT(month) month,
+COUNT(weekday) weekday,
+COUNT(total_trip_minutes) total_trip_minutes,
+COUNT(quarter) quarter
+FROM Q4_trips;
 
 --Create TABLE for all rides_2023
 CREATE TABLE rides_2023 (
@@ -77,7 +79,14 @@ SELECT rideable_type, member_casual, month, weekday, total_trip_minutes, quarter
 
 --Total trips of >=1 minute duration are 4,154,996 
 SELECT *
-FROM rides_2023
+FROM rides_2023;
+
+--Descriptive statistics for rides_2023
+SELECT MIN(total_trip_minutes) AS MIN_Value,
+	MAX(total_trip_minutes) AS Max_Value,
+    AVG(total_trip_minutes) AS Mean_Value
+   
+FROM rides_2023;
 
 --Find the total rides per user by each bike type
 SELECT member_casual, rideable_type,
