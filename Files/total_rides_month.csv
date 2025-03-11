@@ -1,4 +1,5 @@
 ﻿member_casual,month,total_trips
+casual,September,255766
 casual,October,145483
 casual,November,81040
 casual,May,227375
@@ -8,8 +9,9 @@ casual,July,322565
 casual,January,32759
 casual,February,35966
 casual,December,41859
-casual,August,116520
+casual,August,303735
 casual,April,122227
+member,September,396288
 member,October,299058
 member,November,221062
 member,May,359580
@@ -19,5 +21,5 @@ member,July,424922
 member,January,126255
 member,February,124440
 member,December,142949
-member,August,184568
+member,August,449587
 member,April,229736

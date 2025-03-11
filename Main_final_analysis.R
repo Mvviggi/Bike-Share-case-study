@@ -49,10 +49,12 @@ aggregate(triplength2023$total_trip.minutes ~ triplength2023$member_casual, FUN 
 aggregate(triplength2023$total_trip.minutes ~ triplength2023$member_casual, FUN = min)
 
 
-#import files combined from SQL
+#import files combined from queries from SQL
 avg_triplength_wd<- read.csv("C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/AVG_trip_duration_weekday.csv")
+avg_month_triplength<- read.csv("C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/AVG_trip_duration_month.csv")
 totalCount_bikes<- read.csv("C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/total_count_bikeType.csv")
 month_rides<- read.csv("C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/total_rides_month.csv")
+
 # Convert categorical variables to factors with specified levels
 avg_triplength_wd$weekday <- factor(avg_triplength_wd$weekday, levels = days_of_the_week)
 month_rides$month <- factor(month_rides$month, levels = months_of_year)
@@ -86,9 +88,9 @@ ggsave("mean_trip_wekday.png",bg = "white")
 }
 #plot total_count_bikeType
 biketypes<- totalCount_bikes %>%
-  ggplot(aes(y=rideable_type, x=total_trips, fill= member_casual)) +
+  ggplot(aes(x=member_casual, y=total_trips, fill= rideable_type)) +
   geom_bar(stat = "identity", position = "stack", width = 0.7)
-
+biketypes
 #Plot total monthly rides
 monthly_rides<- month_rides %>%
   ggplot(aes(x=month, y=total_trips, fill= member_casual)) +

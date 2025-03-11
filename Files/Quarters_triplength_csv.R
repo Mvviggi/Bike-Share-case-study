@@ -13,6 +13,11 @@ july<- read.csv("C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/Jul
 aug<- read.csv("C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/Aug_trips.csv")
 sept<- read.csv("C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/Sept_trips.csv")
 
+#create csv files for Q3 months
+write.csv(july, "C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/July_trips.csv")
+write.csv(aug, "C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/Aug_trips.csv")
+write.csv(sept, "C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/Sept_trips.csv")
+
 #merge with rbind Q2 and Q3 
 Q2_trips<- rbind(april, may, june)
 Q3_trips<- rbind(july, aug, sept)
