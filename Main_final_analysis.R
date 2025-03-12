@@ -1,70 +1,86 @@
+# STEP 1: WORKING DIRECTORY
+#===============================
 #set work directory
 getwd()
 setwd("https://github.com/Mvviggi/Bike-Share-case-study.git")
 
+
+# STEP 2: LOAD PACKAGES 
+#===============================
 #load packages
-library(tidyverse)
-library(ggplot2)
-library(dplyr)
+library(tidyverse) #to load dplyr and ggplot2 packages
+library(ggplot2) #data visualization
+library(dplyr) #data manipulation
+library(knitr) #for Rmarkdown ReadMe file
 
-# STEP 4: CONDUCT DESCRIPTIVE ANALYSIS
-#=====================================
-# Descriptive analysis on ride_length (all figures in seconds)
 
+# STEP 3: IMPORT DATAFRAMES
+#===============================
+# Import spreadsheets cleaned from Power Query and combined from queries from SQL 
+avg_triplength_wd<- read.csv("https://github.com/Mvviggi/Bike-Share-case-study/blob/e7d1f31158701ba9f0d6f20e29601d3882a68bac/Files/AVG_trip_duration_weekday.csv") #used SQL to query average trip duration per user by weekday
+avg_month_triplength<- read.csv("https://github.com/Mvviggi/Bike-Share-case-study/blob/e7d1f31158701ba9f0d6f20e29601d3882a68bac/Files/AVG_trip_duration_month.csv") #used SQL to query average trip duration per user by month
+totalCount_bikes<- read.csv("https://github.com/Mvviggi/Bike-Share-case-study/blob/e7d1f31158701ba9f0d6f20e29601d3882a68bac/Files/total_count_bikeType.csv")#used SQL to query count of bike type used by user
+month_rides<- read.csv("https://github.com/Mvviggi/Bike-Share-case-study/blob/e7d1f31158701ba9f0d6f20e29601d3882a68bac/Files/total_rides_month.csv") #used SQL to query total number of rides per month 
+triprange<- read.csv("https://github.com/Mvviggi/Bike-Share-case-study/blob/e7d1f31158701ba9f0d6f20e29601d3882a68bac/Files/2023_triprange.csv") #used Power Query to create column grouped by trip duration ranges category
+
+# Import datasets by quarter from Files folder into R to rbind all as one single dataframe
 triplength2023<- rbind(Q1_trips, Q2_trips, Q3_trips, Q4_trips)
-str(triplength2023)
-summary(triplength2023$total_trip.minutes)
-##summary(triplength2023$total_trip.minutes)
-# Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
-# 1.00     5.78     9.93    19.09    17.48 98489.07 
 
+
+# STEP 4: CREATE FUNCTIONS & CONVERT COLUMNS INTO FACTOR VARIABLE
+#===============================
+# Months, weekdays and trip range functions to set these columns as factor variables.
+
+days_of_the_week <- c("Sunday", "Monday", "Tuesday", "Wednesday", 
+                      "Thursday", "Friday", "Saturday")
+
+months_of_year<- c('January', 'February', 'March', 'April', 'May',
+                   'June', 'July', 'August', 'September', 'October', 'November', 'December')
+
+range_level<-c("under 10", "10 to 30", "30 to 60", "over 60")
+
+
+# Convert categorical variables to factors with function levels
+
+avg_triplength_wd$weekday <- factor(avg_triplength_wd$weekday, levels = days_of_the_week)
+month_rides$month <- factor(month_rides$month, levels = months_of_year)
+avg_month_triplength$month<- factor(avg_month_triplength$month, levels = months_of_year)
+
+# STEP 5: CONDUCT DESCRIPTIVE ANALYSIS
+#=====================================
+# Descriptive analysis on ride_length (all figures in minutes)
+
+#Validate data structure of dataframe for entire database of 2023.
+str(triplength2023)
 
 mean(triplength2023$total_trip.minutes) #straight average (total ride length / rides)
 median(triplength2023$total_trip.minutes) #midpoint number in the ascending array of ride lengths
 max(triplength2023$total_trip.minutes) #longest ride
 min(triplength2023$total_trip.minutes) #shortest ride
 
-#histogram
-hist(triplength2023$total_trip.minutes, 
-     main = "Histogram of Total Trip Minutes", 
-     xlab = "Total Trip Minutes", 
-     col = "lightblue", 
-     border = "black")
 
-#adjusting skewness
-hist(triplength2023$total_trip.minutes[triplength2023$total_trip.minutes < 100], 
-     main = "Histogram of Total Trip Minutes (Filtered)", 
-     xlab = "Total Trip Minutes", 
-     col = "lightblue", 
-     border = "black")
-
-#Filtered dataframe to trips that lasted 100 minutes or less
-filtered_trip_length<- triplength2023 %>%
-  filter(total_trip.minutes <= c(100))
-
-# Compare members and casual users
-aggregate(triplength2023$total_trip.minutes ~ triplength2023$member_casual, FUN = mean)
-aggregate(triplength2023$total_trip.minutes ~ triplength2023$member_casual, FUN = median)
-aggregate(triplength2023$total_trip.minutes ~ triplength2023$member_casual, FUN = max)
-aggregate(triplength2023$total_trip.minutes ~ triplength2023$member_casual, FUN = min)
+# Compare summary for members and casual users
+desc_stats<- triplength2023%>% 
+  group_by(member_casual)%>%
+  summarise(
+    mean = mean(total_trip.minutes, na.rm = TRUE),
+    median = median(total_trip.minutes, na.rm = TRUE),
+    max = max(total_trip.minutes, na.rm = TRUE),
+    min = min(total_trip.minutes, na.rm = TRUE)
+  )
+  
+  
 
 
-#import files combined from queries from SQL
-avg_triplength_wd<- read.csv("C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/AVG_trip_duration_weekday.csv")
-avg_month_triplength<- read.csv("C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/AVG_trip_duration_month.csv")
-totalCount_bikes<- read.csv("C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/total_count_bikeType.csv")
-month_rides<- read.csv("C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/total_rides_month.csv")
-
-# Convert categorical variables to factors with specified levels
-avg_triplength_wd$weekday <- factor(avg_triplength_wd$weekday, levels = days_of_the_week)
-month_rides$month <- factor(month_rides$month, levels = months_of_year)
-
+# STEP 6: DATA VISUALIZATION
+#=====================================
+# plotting 
 
 #plot average trip duration by day of the week
 {mean_trip_wekday <- avg_triplength_wd %>%
-  ggplot(aes(x= weekday, y=average_trip_length, fill = member_casual)) +
+  ggplot(aes(x= weekday, y=avg_trip_length, fill = member_casual)) +
   geom_bar(stat = "identity", position = "dodge", width = 0.7) +
-  geom_text(aes(label = round(average_trip_length, 0)), 
+  geom_text(aes(label = round(avg_trip_length, 0)), 
             position = position_dodge(width = 0.7), 
             vjust = -0.3, size = 4) +
   labs(
@@ -79,6 +95,7 @@ month_rides$month <- factor(month_rides$month, levels = months_of_year)
     plot.subtitle = element_text(size = 12, hjust = 0.5),
     strip.text.y = element_text(size = 14, face = "bold"),  # Style for row facets
     axis.text.x = element_text(size = 12, angle = 45, hjust = 1),
+    axis.text.y = element_text(size = 12),
     axis.title = element_text(size = 12),
     legend.title = element_text(size = 12),
     legend.text = element_text(size = 12)
@@ -86,12 +103,157 @@ month_rides$month <- factor(month_rides$month, levels = months_of_year)
 mean_trip_wekday
 ggsave("mean_trip_wekday.png",bg = "white")
 }
-#plot total_count_bikeType
-biketypes<- totalCount_bikes %>%
-  ggplot(aes(x=member_casual, y=total_trips, fill= rideable_type)) +
-  geom_bar(stat = "identity", position = "stack", width = 0.7)
-biketypes
-#Plot total monthly rides
-monthly_rides<- month_rides %>%
-  ggplot(aes(x=month, y=total_trips, fill= member_casual)) +
-  geom_bar(stat = "identity", position = "stack", width = 0.7)
+
+#plot average trip duration by month
+mean_trip_month<- avg_month_triplength %>%
+  ggplot(aes(x= month, y=avg_trip_length, fill = member_casual)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.7) +
+  geom_text(aes(label = round(avg_trip_length, 0)), 
+            position = position_dodge(width = 0.7), 
+            vjust = -0.3, size = 4) +
+  labs(
+    title = "Mean trip duration by month",
+    subtitle = "Comparing trip duration(min) for casual vs. member riders",
+    x = "Month",
+    y = "Mean Trip Length") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(size = 12, hjust = 0.5),
+    strip.text.y = element_text(size = 14, face = "bold"),  # Style for row facets
+    axis.text.x = element_text(size = 12, angle = 45, hjust = 1),
+    axis.title = element_text(size = 12),
+    legend.title = element_text(size = 12),
+    legend.text = element_text(size = 12)
+  )
+mean_trip_month
+  
+#Plot total_count_bikeType
+{biketypes<- totalCount_bikes %>%
+  ggplot(aes(x=member_casual, y=count, fill= ride_type)) +
+  geom_bar(stat = "identity", position = "stack", width = 0.7) +
+    geom_text(aes(label = paste0(round(count / sum(count) * 100, 0), "%")), 
+              position = position_stack(vjust = 0.5), 
+              vjust = 0.5, hjust = 0.3, size = 4, col = "black") +
+  labs(title = "Count of rideable type used by members vs casual",
+       x= "Membership Type",
+       y=" Bike Type Count") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+    strip.text.y = element_text(size = 14, face = "bold"),  # Style for row facets
+    axis.text.x = element_text(size = 12),
+    axis.text.y = element_text(size = 12),
+    axis.title = element_text(size = 12),
+    legend.title = element_text(size = 12),
+    legend.text = element_text(size = 12)
+  )
+} biketypes
+
+###Calculating Percentage of rides per month member vs casual
+# Compute percentage of trips per month
+month_rides_percent <- month_rides %>%
+  group_by(month) %>%
+  mutate(percentage = total_trips / sum(total_trips) * 100)
+
+# Plot using ggplot
+{monthly_rides_per <- month_rides_percent %>%
+  ggplot(aes(x = month, y = percentage, fill = member_casual)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.7) +
+  geom_text(aes(label = paste0(round(percentage, 1), "%")),  # Format as percentage
+            position = position_dodge(width = 0.7),
+            vjust = -0.3, size = 3) +
+  labs(
+    title = "Percentage of Rides per Month",
+    subtitle = "Comparing ride percentages for casual vs. member riders",
+    x = "Month",
+    y = "Percentage of Total Rides"
+  ) +
+  scale_fill_brewer(palette = "Set2") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(size = 12, hjust = 0.5),
+    strip.text.y = element_text(size = 14, face = "bold"),
+    axis.text.x = element_text(size = 12, angle = 45, hjust = 1),
+    axis.title = element_text(size = 12),
+    legend.title = element_text(size = 12),
+    legend.text = element_text(size = 12)
+  )
+}
+# Print the plot
+monthly_rides_per
+
+
+#=====================================
+# Descriptive analysis on trip duration ranges (all figures in minutes)
+
+##Trip range analysis
+{
+  #load dataframe for trip duration count ranges in minutes from directory
+  triprange<- read.csv("C:/Users/mvvb8/Documents/GitHub/Bike-Share-case-study/Files/2023_triprange.csv")
+  str(triprange)
+ 
+  
+  # Convert categorical variables to factors with specified levels
+  triprange$weekday <- factor(triprange$weekday, levels = days_of_the_week)
+  triprange$month <- factor(triprange$month, levels = months_of_year)
+  triprange$trip_range <- factor(triprange$trip_range, levels = range_level)
+  
+  #Convert count_range into numeric
+  triprange$count_range<- as.numeric(triprange$count_range)
+  
+  #Check for missing values NA
+  sum(is.na(triprange))
+  
+}                        
+#Visualization  Median count rides ranges per month
+{
+  triprange %>%
+    group_by(month, member_casual, trip_range) %>%
+    summarise(monthlyCountrange= median(count_range,na.rm = TRUE)) %>%   # Ensuring NA values are handled
+    ggplot()+ 
+    labs(title= "Median count length trips ranges by month",
+         x= "Months",
+         y = "Median count rides ranges")+
+    scale_fill_brewer(palette = "Set2") +
+    geom_bar(aes(x= month, y=monthlyCountrange, fill= trip_range), stat ="identity", position="dodge", width = 0.7) +
+    facet_wrap(~member_casual, scales="fixed") +
+    theme_minimal() +
+    theme(
+      strip.text = element_text(size = 14, face = "bold"),
+      axis.text.x = element_text(size = 12, angle = 45, hjust = 1),
+      plot.title= element_text(size = 16, hjust= 0.5))
+}
+{
+  #Enhanced visualization from above:
+  triprange %>%
+    group_by(month, member_casual, trip_range) %>%
+    summarise(monthlyCountrange = median(count_range, na.rm = TRUE)) %>%
+    ggplot(aes(x = month, y = monthlyCountrange, fill = trip_range)) + 
+    geom_bar(stat = "identity", position = "dodge", width = 0.7) +
+    geom_text(aes(label = round(monthlyCountrange, 0)), 
+              position = position_dodge(width = 0.7), 
+              vjust = -0.3, size = 3) +
+    labs(
+      title = "Median Duration Trip Counts by Month",
+      subtitle = "Comparing counts of trip duration ranges (min) for casual vs. member riders",
+      x = "Month",
+      y = "Median Trip Count"
+    ) +
+    scale_fill_brewer(palette = "Set2") +
+    facet_grid(member_casual ~ .) +  # Facet by rows, removing duplicated months
+    theme_minimal() +
+    theme(
+      plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+      plot.subtitle = element_text(size = 12, hjust = 0.5),
+      strip.text.y = element_text(size = 14, face = "bold"),  # Style for row facets
+      axis.text.x = element_text(size = 10, angle = 45, hjust = 1),
+      axis.title = element_text(size = 12),
+      legend.title = element_text(size = 12),
+      legend.text = element_text(size = 10)
+    )
+}
+

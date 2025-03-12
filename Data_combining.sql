@@ -66,6 +66,7 @@ COUNT(total_trip_minutes) total_trip_minutes,
 COUNT(quarter) quarter
 FROM Q3_trips;
 
+--Validate Q4_trips table 
 SELECT COUNT(*) ,
 COUNT(rideable_type) rideable_type,
 COUNT(member_casual) member_casual,
@@ -97,8 +98,7 @@ SELECT rideable_type, member_casual, month, weekday, total_trip_minutes, quarter
 SELECT *
 FROM rides_2023;
 
-
-
+---Create summary tables for different analysis:
 --Find the total rides per user by each bike type
 SELECT member_casual, rideable_type,
 COUNT(*) as total_rides
@@ -120,7 +120,7 @@ FROM rides_2023
 GROUP BY member_casual, weekday
 ORDER BY member_casual, weekday DESC;
 
---Find the average trip duration per weekday
+--Find the average and median trip duration per weekday
 SELECT member_casual, weekday, 
 AVG(total_trip_minutes) as avg_trip_duration
 FROM rides_2023
@@ -134,4 +134,19 @@ FROM rides_2023
 GROUP BY member_casual, month
 ORDER BY member_casual, month DESC;
 
-
+--Create dataset with mean and median columns calculated for monthly ride lengths
+WITH Ranked AS (
+    SELECT member_casual, 
+           month, 
+           total_trip_minutes, 
+           PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY total_trip_minutes) 
+           OVER (PARTITION BY member_casual, month) AS median_trip
+    FROM rides_2023
+)
+SELECT member_casual, 
+       month, 
+       AVG(total_trip_minutes) AS avg_trip_duration, 
+       MAX(median_trip) AS median_trip_duration
+FROM Ranked
+GROUP BY member_casual, month
+ORDER BY avg_trip_duration, month DESC;

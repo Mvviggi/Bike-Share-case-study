@@ -163,3 +163,112 @@ print(casual_pie_count)
 print(member_pie_count)
 
 
+## Explore database for median monthly trip duration
+
+#median values by quarter for month and weekday
+Q1_month_only<- Q1_trips%>%
+  group_by(month, member_casual) %>%
+  summarize(trip_length= median(total_trip.minutes)) %>%
+  mutate(quarter=as.factor("1"))
+
+Q2_month_only<- Q2_trips%>%
+  group_by(month, member_casual) %>%
+  summarize(trip_length= median(total_trip.minutes)) %>%
+  mutate(quarter=as.factor("2"))
+
+Q3_monthly_only<- Q3_trips%>%
+  group_by(month, member_casual) %>%
+  summarize(trip_length= median(total_trip.minutes)) %>%
+  mutate(quarter=as.factor("3"))
+
+Q4_month_only<- Q4_trips%>%
+  group_by(month, member_casual) %>%
+  summarize(trip_length= median(total_trip.minutes)) %>%
+  mutate(quarter=as.factor("4"))
+
+#rbind Quarters monthly dfs
+
+OnlyM_median_trips<- rbind(Q1_month_only, Q2_month_only, Q3_monthly_only, Q4_month_only)
+
+
+#==================CREATING HISTOGRAMS FOR TRIP LENGTH==========#
+
+#histogram visualization to validate the total trips length of the entire year
+hist(triplength2023$total_trip.minutes, 
+     main = "Histogram of Total Trip Minutes", 
+     xlab = "Total Trip Minutes", 
+     col = "lightblue", 
+     border = "black")
+
+#adjusting skewness- Most rides last less than 500 minutes. 
+hist(triplength2023$total_trip.minutes[triplength2023$total_trip.minutes > 500], 
+     main = "Histogram of Total Trip Minutes (Filtered)", 
+     xlab = "Total Trip Minutes", 
+     col = "lightblue", 
+     border = "black")
+#histogram visualization for MEMBERS  to validate the total trips length of the entire year
+hist_member_data <- triplength2023 %>%
+  filter(member_casual == "member") %>%
+  pull(total_trip.minutes)  # Extract numeric values
+
+hist(hist_member_data,
+     main = "Histogram of Total Trip Minutes",
+     xlab = "Total Trip Minutes",
+     col = "lightblue",
+     border = "black")
+
+
+#histogram visualization for CASUAL  to validate the total trips length of the entire year
+hist_casual_data <- triplength2023 %>%
+  filter(member_casual == "casual") %>%
+  pull(c(total_trip.minutes)) # Extract numeric values
+
+hist(hist_casual_data,
+     main = "Histogram of Total Trip Minutes",
+     xlab = "Total Trip Minutes",
+     col = "orange",
+     border = "black")
+
+##Ggplot for histogram for members and casual
+hist_member<- triplength2023 %>%
+  filter(member_casual =="member",
+         total_trip.minutes <100) %>%
+  ggplot(aes(x=total_trip.minutes)) +
+  geom_histogram(binwidth =3,
+                 fill ="blue",
+                 color= "black")
+
+#histogram with both users <200 minutes
+hist_200<- triplength2023 %>%
+  filter(total_trip.minutes <200) %>%
+  ggplot(aes(x=total_trip.minutes, fill= member_casual)) +
+  geom_histogram(binwidth =3, position="identity", alpha= 0.5) +
+  scale_fill_manual(values = c("blue", "purple")) + 
+  facet_wrap(~ member_casual) +  # Creates separate histograms# Custom colors
+  labs(
+    title = "Histogram of Trip Minutes (< 200 min)",
+    x = "Total Trip Minutes",
+    y = "Count",
+    fill = "Membership Type"
+  ) +
+  theme_minimal()
+
+# Print the plot
+hist_200
+
+hist_over<- triplength2023 %>%
+  filter(total_trip.minutes >=100) %>%
+  ggplot(aes(x=total_trip.minutes, fill= member_casual)) +
+  geom_histogram(binwidth =5, position="identity", alpha= 0.5) +
+  scale_fill_manual(values = c("red", "lightgreen")) + 
+  facet_wrap(~ member_casual) +  # Creates separate histograms# Custom colors
+  labs(
+    title = "Histogram of Trip Minutes (>=100 min)",
+    x = "Total Trip Minutes",
+    y = "Count",
+    fill = "Membership Type"
+  ) +
+  theme_minimal()
+
+# Print the plot
+hist_over
