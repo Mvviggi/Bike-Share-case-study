@@ -109,14 +109,14 @@ covers the bike rides from **January through December 2023**
 
 -   Used SQL to combine 2023 database that was saved in quarters and
     create new tables with summarized descriptive statistics.
-    data.[<ins>Data_combining.sql<ins>](https://github.com/Mvviggi/Bike-Share-case-study/blob/c9f5d591b21cca0ab0665d3d0a07aa930aaabb23/Data_combining.sql)
+    data.[<ins>Data_combining.sql<ins>](Data_combining.sql)
     <br>
 
 3.  Data visualization - Rstudio and Tableau<br>
 
 -   Used R for importing queried tables to create visualizations for
     analysis and create plots.
-    [<ins>Main_final_analysis.R<ins>](https://github.com/Mvviggi/Bike-Share-case-study/blob/e7d1f31158701ba9f0d6f20e29601d3882a68bac/Main_final_analysis.)
+    [<ins>Main_final_analysis.R<ins>](Main_final_analysis.R)
 
 <br>
 
@@ -132,8 +132,8 @@ covers the bike rides from **January through December 2023**
 
 ```{r, echo=FALSE}
 desc_stats<- read.csv("https://github.com/Mvviggi/Bike-Share-case-study/blob/75c13265fb9207b459e8fb185a4dda23e4350006/desc_stats.csv")
-knitr::kable(desc_stats)
 ```
+
 #### **Table 1:** Descriptive statistics ride length
 | member_casual | mean        | median      | max         | min |
 | ------------- | ------------| ----------- | ----------- |-----|
@@ -148,13 +148,13 @@ knitr::kable(desc_stats)
 
 ### Bar plots for mean monthly and day of the week ride time for members vs casual riders
 
-![Figure 1: Mean Ride Duration by Month](https://github.com/Mvviggi/Bike-Share-case-study/blob/75c13265fb9207b459e8fb185a4dda23e4350006/mean_trip_month.png) 
+![Figure 1: Mean Ride Duration by Month](mean_trip_month.png) 
 
 #### Figure 1 indicates that casual riders take longer trips on average during spring and summer, whereas members consistently use the bikes throughout the year but for shorter duration. 
 
 <br>
 
-![Figure 2: Mean Ride Duration by Day of the Week](https://github.com/Mvviggi/Bike-Share-case-study/blob/75c13265fb9207b459e8fb185a4dda23e4350006/mean_trip_wekday.png)
+![Figure 2: Mean Ride Duration by Day of the Week](mean_trip_wekday.png)
 
 #### Figure 2 indicates that casual riders tend to use bikes more frequently on weekends (Friday through Sunday), while members primarily ride on weekdays.
 
